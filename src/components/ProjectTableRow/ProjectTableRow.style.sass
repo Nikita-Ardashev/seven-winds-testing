@@ -1,0 +1,78 @@
+@import "../../variables"
+@import "../ProjectTable/ProjectTable.style"
+
+.table-tr
+    display: flex
+    flex-direction: row
+    align-items: center
+    @include getBorder(bottom)
+    height: 60px
+    &__level
+        position: relative
+
+        .level-lines
+            position: absolute
+            left: 0
+            bottom: 50%
+            &::before, &::after
+                content: ''
+                display: block
+                background: #c6c6c6
+                z-index: 0
+            &::before
+                width: 1px
+                height: 100%
+
+            &::after
+                height: 1px
+                width: 11px
+
+        div
+            position: relative
+            z-index: 1
+            display: flex
+            flex-direction: row
+            align-items: center
+            gap: 6px
+            border-radius: 6px
+            width: max-content
+
+            button
+                cursor: pointer
+                display: flex
+                align-items: center
+                justify-content: center
+                background: transparent
+                img
+                    object-fit: contain
+                    background: $first-background
+                &.table-tr__trash
+                    display: none
+
+            &:not(.no-active):hover
+                padding: 2px 4px 2px 2px
+                background: #414144
+                .table-tr__trash
+                    display: flex
+                img
+                    background: #414144
+    td
+        color: $first-color
+        @include trChildStyle()
+        input
+            background: transparent
+            color: $first-color
+            transition: $transition
+            border: 0 solid #414144
+            width: 100%
+            cursor: pointer
+            @include trTextStyle()
+
+            &:not(:read-only)
+                color: $second-color
+                border: 1px solid #414144
+                border-radius: 6px
+                padding: 10px
+                cursor: text
+            &::-webkit-inner-spin-button
+                display: none

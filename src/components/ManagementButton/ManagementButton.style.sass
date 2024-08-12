@@ -1,0 +1,30 @@
+@import "../../variables"
+.management-button
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+    background: transparent
+    cursor: pointer
+    color: $second-color
+    transition: $transition
+    position: relative
+    font-family: "Roboto", sans-serif
+    font-weight: 400
+    font-size: 14px
+
+    &::after
+        transition: inherit
+        content: ''
+        position: absolute
+        left: 50%
+        top: calc( 100% - 2px )
+        border: 1px solid #fff
+        height: 0
+        width: calc( 100% + 8px )
+        translate: -50%
+        opacity: 0
+    &--active
+        color: $first-color
+        &::after
+            opacity: 1

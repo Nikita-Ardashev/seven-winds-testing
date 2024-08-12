@@ -1,0 +1,19 @@
+@import "../../variables"
+
+.project-tile
+    display: flex
+    flex-direction: row
+    align-items: center
+    gap: 14px
+    background: transparent
+    padding: 6px 20px
+    cursor: pointer
+
+    > p
+        font-family: "Roboto", sans-serif
+        font-weight: 400
+        font-size: 14px
+        color: #fff
+
+    &--active
+        background: $select-background
