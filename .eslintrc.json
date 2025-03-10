@@ -4,7 +4,12 @@
 		"browser": true,
 		"es2021": true
 	},
-	"extends": ["plugin:react/recommended", "plugin:@typescript-eslint/recommended", "plugin:import/typescript"],
+	"extends": [
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:import/typescript",
+		"plugin:react/jsx-runtime"
+	],
 	"overrides": [
 		{
 			"env": {

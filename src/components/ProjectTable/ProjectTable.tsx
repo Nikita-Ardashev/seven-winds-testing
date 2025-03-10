@@ -1,9 +1,12 @@
 import './ProjectTable.style.sass';
+
+import { observer } from 'mobx-react-lite';
 import { memo, ReactNode, useCallback } from 'react';
 import React from 'react';
-import { observer } from 'mobx-react-lite';
-import { EntityTree } from '@/store/treeRows';
+
 import { ITree } from '@/model/types';
+import { EntityTree } from '@/store/treeRows';
+
 import ProjectTableRow from './Row/ProjectTableRow';
 
 interface IProjectTableRow {

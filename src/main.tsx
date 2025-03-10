@@ -1,7 +1,9 @@
+import './index.style.sass';
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import App from './App.tsx';
-import './index.style.sass';
 import { EntityTree } from './store/treeRows.ts';
 
 EntityTree.setTree();

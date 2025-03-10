@@ -1,5 +1,6 @@
-import { modelRow, modelTree, modelEntity, modelFullRow } from '@/store/modelTreeRows';
-import { Instance, SnapshotOut } from 'mobx-state-tree';
+import { Instance } from 'mobx-state-tree';
+
+import { modelEntity, modelFullRow,modelRow, modelTree } from '@/store/modelTreeRows';
 
 export interface IEntity extends Instance<typeof modelEntity> {}
 export interface IRow extends Instance<typeof modelRow> {}

@@ -1,12 +1,4 @@
 import {
-	fetchCreateEntity,
-	fetchCreateRowInEntity,
-	fetchDeleteRow,
-	fetchGetTreeRows,
-	fetchUpdateRow,
-} from '@/model/api.service';
-import { IChangeRow, IEntity, ITree } from '@/model/types';
-import {
 	applySnapshot,
 	cast,
 	destroy,
@@ -16,6 +8,14 @@ import {
 	Instance,
 	types,
 } from 'mobx-state-tree';
+
+import {
+	fetchCreateRowInEntity,
+	fetchDeleteRow,
+	fetchGetTreeRows,
+	fetchUpdateRow,
+} from '@/model/api.service';
+import { IChangeRow, ITree } from '@/model/types';
 
 export interface ITreeRowWithSiblings {
 	node: ITree;

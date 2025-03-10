@@ -6,7 +6,7 @@ interface ITab {
 
 export default function Tab({ title }: ITab) {
 	return (
-		<div className='tab'>
+		<div className="tab">
 			<p>{title}</p>
 		</div>
 	);

@@ -1,3 +1,8 @@
+import './ProjectTableRow.style.sass';
+
+import FileIcon from '@img/file.svg';
+import TrashIcon from '@img/trash.svg';
+import { observer } from 'mobx-react-lite';
 import {
 	HTMLInputTypeAttribute,
 	memo,
@@ -6,12 +11,9 @@ import {
 	useRef,
 	useState,
 } from 'react';
-import './ProjectTableRow.style.sass';
-import FileIcon from '@img/file.svg';
-import TrashIcon from '@img/trash.svg';
-import { EntityTree } from '@/store/treeRows';
+
 import { IRow, ITree } from '@/model/types';
-import { observer } from 'mobx-react-lite';
+import { EntityTree } from '@/store/treeRows';
 
 interface IProjectTableRow {
 	level: number;

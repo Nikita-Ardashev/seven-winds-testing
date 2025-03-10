@@ -1,13 +1,15 @@
 import './App.style.sass';
+
+import ArrowIcon from '@img/arrow.svg';
 import MenuIcon from '@img/menu.svg';
 import ShareIcon from '@img/share.svg';
-import ArrowIcon from '@img/arrow.svg';
-import { ManagementButton } from './components/ManagementButton';
-import { Tab } from './components/Tab';
-import ProjectTile from './components/ProjectTile/ProjectTile';
-import { ProjectTable } from './components/ProjectTable';
-import { memo } from 'react';
 import { observer } from 'mobx-react-lite';
+import { memo } from 'react';
+
+import { ManagementButton } from './components/ManagementButton';
+import { ProjectTable } from './components/ProjectTable';
+import ProjectTile from './components/ProjectTile/ProjectTile';
+import { Tab } from './components/Tab';
 
 export const PROJECTS: string[] = [
 	'По проекту',

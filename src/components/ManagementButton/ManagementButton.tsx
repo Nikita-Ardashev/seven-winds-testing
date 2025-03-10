@@ -1,5 +1,6 @@
-import React, { CSSProperties, useState } from 'react';
 import './ManagementButton.style.sass';
+
+import React, { CSSProperties, useState } from 'react';
 interface IManagementButton {
 	content: React.ReactNode | string;
 	styled?: CSSProperties;

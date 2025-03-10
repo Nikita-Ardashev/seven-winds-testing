@@ -1,6 +1,7 @@
+import './ProjectTile.style.sass';
+
 import TileIcon from '@img/tile.svg';
 import { useState } from 'react';
-import './ProjectTile.style.sass';
 
 interface IProjectTile {
 	name: string;
