@@ -13,4 +13,13 @@ export default defineConfig({
 			'@img': fileURLToPath(new URL('./src/assets', import.meta.url)),
 		},
 	},
+	server: {
+		proxy: {
+			'/api': {
+				target: 'http://185.244.172.108:8081/',
+				changeOrigin: true,
+				rewrite: (path) => path.replace(/^\/api/, ''),
+			},
+		},
+	},
 });
