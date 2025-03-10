@@ -1,0 +1,24 @@
+$first-background: #27272a
+$second-background: #202124
+$select-background: #a1a1aa
+
+$first-color: #fff
+$second-color: #a1a1aa
+
+$line-color: #414144
+
+$transition: .4s
+
+@mixin getBorder($sideBorder...)
+    $br: 1px solid $line-color
+    @for $i from 0 to length($sideBorder)
+        $i: $i + 1
+        $side: nth($sideBorder, $i)
+        @if($side == 'top')
+            border-top: $br
+        @else if($side == 'bottom')
+            border-bottom: $br
+        @else if($side == 'left')
+            border-left: $br
+        @else if($side == 'right')
+            border-right: $br
